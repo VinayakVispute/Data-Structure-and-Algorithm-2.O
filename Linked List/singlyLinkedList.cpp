@@ -25,9 +25,15 @@ public:
              << "Memory is free for node with data " << value << endl;
     }
 };
-void insertAtHead(int val, Node *&Head)
+void insertAtHead(int val, Node *&Head, Node *Tail)
 {
     Node *temp = new Node(val);
+    if (Head == NULL)
+    {
+        Head = temp;
+        Tail = temp;
+        return;
+    }
     temp->next = Head;
     Head = temp;
 }
@@ -45,9 +51,15 @@ void print(Node *&Head)
     cout << endl;
 }
 
-void insertAtTail(int val, Node *&Tail)
+void insertAtTail(int val, Node *&Head, Node *&Tail)
 {
     Node *temp = new Node(val);
+    if (Head == NULL)
+    {
+        Head = temp;
+        Tail = temp;
+        return;
+    }
 
     Tail->next = temp;
     Tail = temp;
@@ -57,7 +69,7 @@ void insertAtMidde(int val, int position, Node *&Head, Node *&Tail)
 {
     if (position == 1)
     {
-        insertAtHead(val, Head);
+        insertAtHead(val, Head, Tail);
         return;
     }
     else
@@ -72,7 +84,7 @@ void insertAtMidde(int val, int position, Node *&Head, Node *&Tail)
         // Little Different from Code Help with Babbar
         if (iterator == Tail)
         {
-            insertAtTail(val, Tail);
+            insertAtTail(val, Head, Tail);
             return;
         }
         temp->next = iterator->next;
@@ -128,31 +140,12 @@ void deleteByValue(Node *&Head, Node *&Tail, int key)
 
 // int main()
 // {
-//     Node *n = new Node(5);
+
+//     Node *n = NULL;
 //     Node *Head = n;
 //     Node *Tail = n;
-//     insertAtHead(4, Head);
-//     // print(Head);
-//     insertAtHead(2, Head);
-//     // print(Head);
-//     insertAtHead(1, Head);
-//     // print(Head);
-//     insertAtTail(7, Tail);
-//     // print(Head);
-//     insertAtMidde(3, 3, Head, Tail);
-//     // print(Head);
-//     insertAtMidde(8, 7, Head, Tail);
-//     // print(Head);
-//     insertAtMidde(-1, 1, Head, Tail);
-//     // print(Head);
-//     insertAtMidde(0, 0, Head, Tail);
-//     print(Head); //
-//     int a;
-//     cin >> a;
-//     // deleteAtPosition(Head, Tail, a);
-//     // print(Head);
-//     deleteByValue(Head, Tail, a);
+
+//     insertAtTail(1, Head, Tail);
+//     insertAtHead(1, Head, Tail);
 //     print(Head);
-//     cout << endl
-//          << Head->data << " " << Tail->data;
 // }
