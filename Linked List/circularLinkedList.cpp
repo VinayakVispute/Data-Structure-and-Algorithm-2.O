@@ -115,39 +115,39 @@ void deleteByElement(Node *&Tail, int key)
     }
 }
 
-int main()
-{
-    Node *Tail = NULL;
-    print(Tail);
-    insertNode(Tail, 5, 1);
-    deleteByElement(Tail, 1);
+// int main()
+// {
+//     Node *Tail = NULL;
+//     print(Tail);
+//     insertNode(Tail, 5, 1);
+//     deleteByElement(Tail, 1);
 
-    print(Tail);
-    insertNode(Tail, 1, 3);
-    print(Tail);
-    cout << endl
-         << "Tail  => " << Tail->data << endl;
-    insertNode(Tail, 3, 5);
-    print(Tail);
-    cout << endl
-         << "Tail  => " << Tail->data << endl;
-    insertNode(Tail, 1, 2);
-    print(Tail);
-    cout << endl
-         << "Tail  => " << Tail->data << endl;
-    insertNode(Tail, 3, 4);
-    print(Tail);
-    cout << endl
-         << "Tail  => " << Tail->data << endl;
-    insertNode(Tail, 5, 9);
-    print(Tail);
-    cout << endl
-         << "Tail  => " << Tail->data << endl;
-    insertNode(Tail, 1, 11);
-    print(Tail);
-    cout << endl
-         << "Tail  => " << Tail->data << endl;
+//     print(Tail);
+//     insertNode(Tail, 1, 3);
+//     print(Tail);
+//     cout << endl
+//          << "Tail  => " << Tail->data << endl;
+//     insertNode(Tail, 3, 5);
+//     print(Tail);
+//     cout << endl
+//          << "Tail  => " << Tail->data << endl;
+//     insertNode(Tail, 1, 2);
+//     print(Tail);
+//     cout << endl
+//          << "Tail  => " << Tail->data << endl;
+//     insertNode(Tail, 3, 4);
+//     print(Tail);
+//     cout << endl
+//          << "Tail  => " << Tail->data << endl;
+//     insertNode(Tail, 5, 9);
+//     print(Tail);
+//     cout << endl
+//          << "Tail  => " << Tail->data << endl;
+//     insertNode(Tail, 1, 11);
+//     print(Tail);
+//     cout << endl
+//          << "Tail  => " << Tail->data << endl;
 
-    deleteByElement(Tail, 9);
-    print(Tail);
-}
+//     deleteByElement(Tail, 9);
+//     print(Tail);
+// }
