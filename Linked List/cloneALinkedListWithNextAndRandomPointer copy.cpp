@@ -1,3 +1,4 @@
+
 // C++ code to implement the approach
 
 #include <bits/stdc++.h>
