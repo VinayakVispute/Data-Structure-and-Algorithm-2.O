@@ -29,7 +29,7 @@ public:
     }
 };
 
-void print(Node *&Head)
+void print(Node *Head)
 {
     Node *iterator = Head;
     cout << endl;
@@ -78,7 +78,7 @@ void insertAtTail(Node *&Head, Node *&Tail, int key)
     temp->previous = Tail;
     Tail = temp;
 }
-void reversePrint(Node *&Tail)
+void reversePrint(Node *Tail)
 {
     Node *iterator = Tail;
     cout << endl
@@ -155,33 +155,32 @@ void deleteAtPosition(Node *&Head, Node *&Tail, int position)
     }
 }
 
-
-int main()
-{
-    // Node *n = new Node(5);
-    Node *Head = NULL;
-    Node *Tail = NULL;
-    // print(Head);
-    insertAtHead(Head, Tail, 4);
-    // print(Head);
-    insertAtHead(Head, Tail, 3);
-    // print(Head);
-    insertAtHead(Head, Tail, 2);
-    // print(Head);
-    insertAtHead(Head, Tail, 1);
-    // print(Head);
-    insertAtTail(Head, Tail, 6);
-    // print(Head);
-    insertAtTail(Head, Tail, 7);
-    // print(Head);
-    insert(Head, Tail, 5, 5);
-    print(Head);
-    int a;
-    cin >> a;
-    deleteAtPosition(Head, Tail, a);
-    print(Head);
-    reversePrint(Tail);
-    cout << endl;
-    cout << endl
-         << " H==>" << Head->data << " T==>" << Tail->data;
-}
+// int main()
+// {
+// Node *n = new Node(5);
+// Node *Head = NULL;
+// Node *Tail = NULL;
+// print(Head);
+// insertAtHead(Head, Tail, 4);
+// print(Head);
+// insertAtHead(Head, Tail, 3);
+// print(Head);
+// insertAtHead(Head, Tail, 2);
+// print(Head);
+// insertAtHead(Head, Tail, 1);
+// print(Head);
+// insertAtTail(Head, Tail, 6);
+// print(Head);
+// insertAtTail(Head, Tail, 7);
+// print(Head);
+// insert(Head, Tail, 5, 5);
+// print(Head);
+// int a;
+// cin >> a;
+// deleteAtPosition(Head, Tail, a);
+// print(Head);
+// reversePrint(Tail);
+// cout << endl;
+// cout << endl
+//  << " H==>" << Head->data << " T==>" << Tail->data;
+// }

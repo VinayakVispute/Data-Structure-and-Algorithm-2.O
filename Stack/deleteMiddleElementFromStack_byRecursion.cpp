@@ -6,17 +6,6 @@ using namespace std;
 
 void solve(stack<int> &inputStack, int N, int count)
 {
-    if (count == N / 2)
-    {
-        inputStack.pop();
-        return;
-    }
-
-    count++;
-    int a = inputStack.top();
-    inputStack.pop();
-    solve(inputStack, N, count);
-    inputStack.push(a);
 }
 
 void deleteMiddle(stack<int> &inputStack, int N)
