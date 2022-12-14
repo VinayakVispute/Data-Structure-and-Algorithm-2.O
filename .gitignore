@@ -7,3 +7,4 @@ Stack/prefixExpressionEvaluation.cpp
 Stack/test.exe
 Stack/test.exe
 *.exe
+*.json
